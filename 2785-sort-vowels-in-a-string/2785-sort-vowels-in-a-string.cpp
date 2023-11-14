@@ -1,8 +1,5 @@
 class Solution {
 public:
-    struct cmp {
-        bool operator()(int a, int b) const { return a < b; }
-    };
     string sortVowels(string s) {
         map<char, int> m;
         int n = s.length();
