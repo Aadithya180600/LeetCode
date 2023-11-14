@@ -4,7 +4,7 @@ public:
         bool operator()(int a, int b) const { return a < b; }
     };
     string sortVowels(string s) {
-        map<char, int, cmp> m;
+        map<char, int> m;
         int n = s.length();
         for(int i = 0;i<n;i++){
             if(s[i]=='A' || s[i] == 'E' || s[i]=='I' || s[i] == 'O' || s[i] == 'U'){
