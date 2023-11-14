@@ -12,15 +12,14 @@ public:
             }
         }
         auto it = m.begin();
-        string t = "";
+
         for(int i = 0;i<n;i++){
-            if(m.find(s[i]) == m.end()) t+=s[i];
-            else{
-                t+=it->first;
+            if(m.find(s[i]) != m.end()) {
+                s[i] = it->first;
                 it->second--;
                 if(it->second == 0) it++;
             }
         }
-        return t;
+        return s;
     }
 };
