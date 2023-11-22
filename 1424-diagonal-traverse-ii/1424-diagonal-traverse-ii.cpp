@@ -11,26 +11,20 @@ public:
         vector<int> res;
         q.push(make_pair(0,0));
         v[0][0] = 1;
-        int l = 0;
+        int x, y;
         while(!q.empty()){
-            int x = q.front().first;
-            int y = q.front().second;
-            
+            x = q.front().first;
+            y = q.front().second;
             q.pop();
             res.push_back(nums[x][y]);
-            // cou<<"\n";
             if(x+1<n and y<nums[x+1].size() and !v[x+1][y]) {
                 q.push(make_pair(x+1, y));
                 v[x+1][y] = 1;
-                // cout<<x+1<<" "<<y<<"\t";
             }
             if(y+1<nums[x].size() and !v[x][y+1]) {
                 q.push(make_pair(x, y+1));
-                // cout<<x<<" "<<y+1<<"\t";
                 v[x][y+1] = 1;
             }
-            // cout<<"\n";
-            // if(l==30) break;
         }
         return res;
     }
