@@ -7,7 +7,6 @@ public:
         size = s;
         total = 0;
     }
-    
     double next(int val) {
         if(q.size() < size){
             q.push(val);
