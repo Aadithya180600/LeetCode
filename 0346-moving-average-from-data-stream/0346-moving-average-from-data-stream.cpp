@@ -5,8 +5,6 @@ public:
     int total;
     MovingAverage(int s) {
         size = s;
-        queue<int> new_queue;
-        q.swap(new_queue);
         total = 0;
     }
     
