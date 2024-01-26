@@ -9,20 +9,11 @@ public:
             r[i] = r[i+1]*nums[i];
         }
 
-        for(int i = 0;i<n;i++){
-            if(i == 0){
-                r[i] = r[i+1];
-                l = l*nums[i];
-            }
-            else if(i == n-1)
-            {
-                r[i] = l;
-            }
-            else{
-                r[i] = l*r[i+1];
-                l = l * nums[i];
-            }
+        for(int i = 0;i<n-1;i++){
+            r[i] = l*r[i+1];
+            l = l * nums[i];
         }
+        r[n-1] = l;
         return r;
     }
 };
