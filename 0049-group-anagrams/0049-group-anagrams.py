@@ -8,5 +8,4 @@ class Solution:
             else:
                 d[k] = []
                 d[k].append(i)
-        # print(d.values())
         return d.values()
