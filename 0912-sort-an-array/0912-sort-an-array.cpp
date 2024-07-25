@@ -50,7 +50,7 @@ public:
     }
 
     vector<int> sortArray(vector<int>& nums) {
-        if(nums.size() < 18){
+        if(nums.size() < 12){
             insertion_sort(nums);
         }
         else {
