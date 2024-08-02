@@ -5,6 +5,7 @@ public:
         for(int i :nums){
             if(i) a++;
         }
+        if(a==n or a == 0) return 0;
         int z = 0, min = 0;
         for(int i=0;i<a;i++){
             if(!nums[i]) z++;
