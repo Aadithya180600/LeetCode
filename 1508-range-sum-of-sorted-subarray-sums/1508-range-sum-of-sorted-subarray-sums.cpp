@@ -19,7 +19,7 @@ public:
             }
         }
         sort(v.begin(), v.end());
-        long long res = 0;
+        int res = 0;
        
         for(int i = left-1;i<right;i++){
             res = (res + v[i]) % mod;
