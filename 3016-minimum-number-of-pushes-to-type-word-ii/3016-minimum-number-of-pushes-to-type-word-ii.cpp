@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minimumPushes(string word) {
-        vector<int> a(26, 0);
+        vector<int> a(26);
         for(char c: word){
             a[c-'a']++;
         }
