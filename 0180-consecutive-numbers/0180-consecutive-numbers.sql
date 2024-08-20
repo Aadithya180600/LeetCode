@@ -1,11 +1,9 @@
-SELECT DISTINCT l1.num AS ConsecutiveNums
-FROM
-    Logs l1,
-    Logs l2,
-    Logs l3
-WHERE
-    l1.Id = l2.Id - 1
-    AND l2.Id = l3.Id - 1
-    AND l1.Num = l2.Num
-    AND l2.Num = l3.Num
-;
+SELECT DISTINCT l1.num AS ConsecutiveNums FROM Logs l1
+JOIN
+(
+    SELECT l.id AS id, l.num as num1, ll.num as num2 FROM Logs l
+    JOIN Logs ll
+    WHERE ll.id = l.id + 1
+) AS l2
+WHERE l2.id = l1.id + 1
+AND l1.num = l2.num1 and l2.num1 = l2.num2;
